@@ -1,0 +1,206 @@
+/* generales/globales */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav{
+    background-color: #eec0c6;
+background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+border-radius: 15px;
+
+}
+/* index */
+.bodyMenu{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: lightpink;
+}
+.ulMenu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.ulMenu .liMenu{
+    position: relative;
+    list-style: none;
+}
+.ulMenu .liMenu .aMenu{
+    position: relative;
+    font-size: 4cm;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+.ulMenu .liMenu .aMenu::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--crl);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: 8px solid var(--crl);
+    -webkit-text-stroke: 1px var(--clr);
+}
+.ulMenu .liMenu .aMenu:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+}
+.logoNav{
+    width: 100px;
+    border-radius: 60px;
+}
+.navPer{
+    justify-content: end;
+}
+.navFont{
+    font-size: 22px;
+}
+
+
+
+/* inicio */
+.positionRide{
+    margin-left: 15px;
+}
+
+.fotoCv{
+    border-radius: 100px;
+}
+.listContactos{
+    display: flex;
+    justify-content: center;
+
+}
+.listContactos ul{
+    list-style: none;
+}
+.listButtom{
+    text-decoration: none;
+    color: black;
+}
+.articleDerecha{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.h5Stile{
+    margin-top: 10px;
+}
+.contGeneral{
+    display: flex;
+    margin: 15, 0 , 15, 0;
+}
+.sobreMi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.habilidades{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.listHabilidades{
+    list-style: none;
+}
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* boda */
+
+.corrusel{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* estilos de las galerias*/
+.ContenedorGalerias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+  }
+  .galeria a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    /* box-shadow: 0 0 6px rgba(0, 0, 0, .5); */
+  }
+  .galeria .caru{
+    width: 100%;
+    vertical-align: top;
+    /* height: 100%; */   /* mod 100px */
+    transition: transform 0.5s;
+  }
+  .galeria a:hover .caru{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+  }
+  .light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+  }
+  .light-box .caru{
+    /* width: 75vw; */
+    max-height: 100%; /* valor de 70 vh */
+  }
+  .light-box:target{
+    transform: scale(1);
+  }
+  .close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: #fff;
+    color: #851919;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+  }
+  .next{
+    display: block;
+    background: #fff;
+    color: #851919;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+  }
+  /* fin de las galerias */
